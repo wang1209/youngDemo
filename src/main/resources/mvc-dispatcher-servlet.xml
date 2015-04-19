@@ -12,7 +12,7 @@
     <mvc:annotation-driven/>
     <!-- Maps '/' requests to the 'home' view -->
     <mvc:view-controller path="/" view-name="home/index"/>
-
+    <mvc:resources mapping="/resources/**" location="resources/"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
