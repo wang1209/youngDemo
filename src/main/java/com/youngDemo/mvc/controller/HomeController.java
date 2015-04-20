@@ -23,8 +23,8 @@ public class HomeController {
     }
     @RequestMapping("/test")
     public String test(Model model){
-        List<UserEntity> userList =userService.findAllList();
-        model.addAttribute(userList);
+        UserEntity user =userService.loadUserById(4);
+        model.addAttribute(user);
         return "/home/test";
     }
 }

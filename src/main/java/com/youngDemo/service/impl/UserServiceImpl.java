@@ -43,5 +43,11 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    public UserEntity loadUserById(int id) {
+        return baseDao.load(UserEntity.class,id);
+    }
+
+    public UserEntity loadUser(int id){return baseDao.load(UserEntity.class,id);}
+
 
 }

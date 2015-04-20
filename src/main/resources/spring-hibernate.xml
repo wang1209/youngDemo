@@ -65,6 +65,9 @@
 				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
 				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
 				<prop key="hibernate.use_sql_comments">${hibernate.use_sql_comments}</prop>
+				<prop key="hibernate.cache.use_second_level_cache">${hibernate.second_level_cache}</prop>
+				<prop key="hibernate.cache.use_query_cache">${hibernate.query_cache}</prop>	
+				<prop key="hibernate.cache.region.factory_class">${hibernate.class_cache}</prop>
 			</props>
 			</property>
 		<!-- autoscan annotation for hiberante config -->
@@ -73,11 +76,11 @@
 				<value>com.youngDemo.mvc.model.po</value>
 			</list>
 		</property>
+
 	</bean>
 
 	<!-- 配置事务管理器 -->
 	<bean name="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	<!-- 配置事务通知属性 -->

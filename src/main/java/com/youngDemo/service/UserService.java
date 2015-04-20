@@ -19,4 +19,6 @@ public interface UserService {
     public List<UserEntity> findAllList();
 
     public UserEntity findUserByNameAndPassword(UserEntity user);
+
+    public UserEntity loadUserById(int id);
 }

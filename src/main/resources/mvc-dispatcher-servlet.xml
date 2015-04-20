@@ -13,6 +13,8 @@
     <!-- Maps '/' requests to the 'home' view -->
     <mvc:view-controller path="/" view-name="home/index"/>
     <mvc:resources mapping="/resources/**" location="resources/"/>
+    <!-- 使用默认的Servlet来响应静态文件  -->
+    <mvc:default-servlet-handler/>
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/views/"/>
         <property name="suffix" value=".jsp"/>

@@ -18,7 +18,7 @@
 </head>
 <body>
 <jsp:include page="/layout/topNav"></jsp:include>
-<a href="/home/test" class="btn btn-primary btn-block">test${userEntity.name}</a>
+
 
 
 <jsp:include page="/layout/footer"></jsp:include>

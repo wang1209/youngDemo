@@ -29,6 +29,10 @@ public class BaseDaOImpl<T> implements BaseDao<T> {
 		return sessionFactory.getCurrentSession();
 	}
 
+	public T load(Class<T> c, Serializable id) {
+		return (T) this.getCurrentSession().load(c, id);
+	}
+
 	public Serializable save(T o) {
 		return this.getCurrentSession().save(o);
 	}

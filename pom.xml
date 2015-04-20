@@ -20,7 +20,10 @@
         <log4j.version>1.2.17</log4j.version>
         <druid.version>1.0.13</druid.version>
         <aspectjweaver.version>1.5.4</aspectjweaver.version>
-        <ehcache.version>2.7.0</ehcache.version>
+        <ehcache.version>2.6.10</ehcache.version>
+        <ehcache.web.version>2.0.4</ehcache.web.version>
+        <net.sf.ehcache.version>2.4.6</net.sf.ehcache.version>
+
 
 
     </properties>
@@ -78,6 +81,11 @@
             <artifactId>hibernate-c3p0</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-ehcache</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
         <!-- servlet -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -126,6 +134,25 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
-        </dependency></dependencies>
+        </dependency>
+        <!-- ehcache 缓存-->
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-core</artifactId>
+            <version>${ehcache.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-web</artifactId>
+            <version>${ehcache.web.version}</version>
+
+        </dependency>
+        <dependency>
+            <groupId>net.sf.ehcache</groupId>
+            <artifactId>ehcache-terracotta</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

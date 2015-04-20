@@ -13,12 +13,12 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-  <jsp:include page="/layout/header"></jsp:include>
-  <title></title>
+    <jsp:include page="/layout/header"></jsp:include>
+    <title></title>
 </head>
 <body>
 <jsp:include page="/layout/topNav"></jsp:include>
-<a href="/home/test" class="btn btn-primary btn-block">test${userEntity.name}</a>
+
 
 
 <jsp:include page="/layout/footer"></jsp:include>

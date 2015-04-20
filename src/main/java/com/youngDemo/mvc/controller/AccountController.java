@@ -33,13 +33,21 @@ public class AccountController {
     }
     @RequestMapping("/detail/{id}")
     public String detail(@PathVariable("id") int id,Model model){
-        model.addAttribute("userID",id);
+        model.addAttribute("userID", id);
 
         return "/account/detail";
     }
     @RequestMapping("/userManage")
     public String userManage(){
         return "/account/userManage";
+    }
+    @RequestMapping("/login")
+         public String login(){
+        return "/account/login";
+    }
+    @RequestMapping("/register")
+    public String register(){
+        return "/account/register";
     }
 
 }

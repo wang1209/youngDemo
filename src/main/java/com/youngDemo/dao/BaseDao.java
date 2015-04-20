@@ -10,7 +10,7 @@ import java.util.List;
  * 
  */
 public interface BaseDao<T> {
-
+	T load(Class<T> c, Serializable id);
 	/**
 	 * 保存一个对象
 	 * 
