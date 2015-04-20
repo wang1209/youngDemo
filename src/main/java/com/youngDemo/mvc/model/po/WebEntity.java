@@ -1,5 +1,7 @@
 package com.youngDemo.mvc.model.po;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 /**
@@ -15,7 +17,8 @@ public class WebEntity {
     private String myStatus;
 
     @Id
-    @Column(name = "ID")
+    @GenericGenerator(name = "generator", strategy = "native")
+    @GeneratedValue(generator = "generator")
     public int getId() {
         return id;
     }

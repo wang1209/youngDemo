@@ -107,12 +107,12 @@
 			<tx:method name="*" propagation="REQUIRED" />
 		</tx:attributes>
 	</tx:advice>
-	        <!-- 配置事务切面 -->
-	        <aop:config>
-	            <aop:pointcut id="serviceOperation"
-	                expression="execution(* com.youngDemo.service..*.*(..))" />
-	            <aop:advisor advice-ref="transactionAdvice" pointcut-ref="serviceOperation" />
-	        </aop:config>
+	<!-- 配置事务切面 -->
+	<aop:config>
+		<aop:pointcut id="serviceOperation"
+			expression="execution(* com.youngDemo.service..*.*(..))" />
+		<aop:advisor advice-ref="transactionAdvice" pointcut-ref="serviceOperation" />
+	</aop:config>
 
 <!--	<aop:config>-->
 <!--		<aop:pointcut id="transactionPointcut" expression="execution(* com.youngDemo.service..*Impl.*(..))" />-->

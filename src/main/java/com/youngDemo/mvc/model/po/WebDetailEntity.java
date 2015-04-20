@@ -1,5 +1,7 @@
 package com.youngDemo.mvc.model.po;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -16,7 +18,8 @@ public class WebDetailEntity {
     private Timestamp createDate;
 
     @Id
-    @Column(name = "ID")
+    @GenericGenerator(name = "generator", strategy = "native")
+    @GeneratedValue(generator = "generator")
     public int getId() {
         return id;
     }
