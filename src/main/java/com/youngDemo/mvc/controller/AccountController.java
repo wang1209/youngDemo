@@ -3,9 +3,7 @@ package com.youngDemo.mvc.controller;
 import com.youngDemo.mvc.model.po.UserEntity;
 import com.youngDemo.service.UserService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.Model;
 
@@ -42,12 +40,20 @@ public class AccountController {
         return "/account/userManage";
     }
     @RequestMapping("/login")
-         public String login(){
+        public String login(Model model){
+        UserEntity userEntity=new UserEntity();
+        model.addAttribute("userEntity",userEntity);
         return "/account/login";
     }
     @RequestMapping("/register")
     public String register(){
         return "/account/register";
+    }
+    @RequestMapping("/add")
+    public ModelAndView add(@ModelAttribute("userEntity") UserEntity userEntity,ModelAndView modelAndView){
+        modelAndView.addObject(userEntity);
+        modelAndView.setViewName("/home/index");
+        return modelAndView;
     }
 
 }

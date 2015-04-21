@@ -6,11 +6,41 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>youngDemo</name>
-
+    <!-- Maven official repository -->
+    <repositories>
+        <repository>
+            <id>maven</id>
+            <name>Maven Repository Switchboard</name>
+            <layout>default</layout>
+            <url>http://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>alibaba-opensource</id>
+            <name>alibaba-opensource</name>
+            <url>http://code.alibabatech.com/mvn/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>alibaba-opensource-snapshot</id>
+            <name>alibaba-opensource-snapshot</name>
+            <url>http://code.alibabatech.com/mvn/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>terracotta-releases</id>
+            <url>http://www.terracotta.org/download/reflector/releases</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+    </repositories>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
         <spring.version>4.1.6.RELEASE</spring.version>
+        <org.springframework.security-version>3.2.0.RELEASE</org.springframework.security-version>
         <hibernate.version>4.3.8.Final</hibernate.version>
         <mysql.version>5.1.30</mysql.version>
         <jstl.version>1.2</jstl.version>
@@ -62,7 +92,12 @@
             <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
-
+        <!-- Security (used for CSRF protection only) -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${org.springframework.security-version}</version>
+        </dependency>
         <!-- Mysql -->
         <dependency>
             <groupId>mysql</groupId>

@@ -1,14 +1,18 @@
 package com.youngDemo.mvc.model.po;
 
-import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.*;
+import org.hibernate.annotations.Cache;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * Created by WY on 2015/4/7.
  */
 @Entity
 @Table(name = "user", schema = "")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class UserEntity {
     private int id;
     private String name;
