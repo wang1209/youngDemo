@@ -50,7 +50,7 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	<filter>
+	<!--<filter>
 		<filter-name>csrfFilter</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
 		<async-supported>true</async-supported>
@@ -58,7 +58,7 @@
 	<filter-mapping>
 		<filter-name>csrfFilter</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping>-->
 	<!-- spring mvc mapping -->
 	<servlet-mapping>
 		<servlet-name>springMvc</servlet-name>
