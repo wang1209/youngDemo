@@ -2,6 +2,7 @@ package org.young.algorithm;
 
 /**
  * Created by celine on 2015/5/2.
+ * 归并排序
  */
 public class MergeSort {
 
