@@ -2,6 +2,7 @@ package org.young.algorithm;
 
 /**
  * Created by celine on 2015/5/2.
+ * 选择排序
  */
 public class SelectionSort {
     public void main(int[] a) {
