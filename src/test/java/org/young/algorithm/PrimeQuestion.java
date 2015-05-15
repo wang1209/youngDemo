@@ -3,6 +3,7 @@ package org.young.algorithm;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
 
@@ -19,16 +20,16 @@ public class PrimeQuestion {
     @Test
     public void main(){
         int [] a =new int[n+1];
-        List v =new ArrayList();
+        List array =new ArrayList();
         for (int i=2;i<=n;i++){
             if (a[i]==0){
-                v.add(i);
+                array.add(i);
                 for (int j=i;j<=n;j+=i){
                     a[j]=1;
                 }
             }
         }
-        for (Object o:v){
+        for (Object o:array){
             System.out.print(o.toString()+" ");
         }
     }

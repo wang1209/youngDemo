@@ -8,6 +8,8 @@ import java.util.ArrayList;
  */
 
 public class DaYinSuShu {
+
+
     public static void main(String args[]){
         int maxN=200;
         ArrayList<Integer> arrayList=new ArrayList<Integer>();
